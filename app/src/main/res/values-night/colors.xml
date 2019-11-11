@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- deepPurple200 -->
+    <color name="colorPrimary">#b388ff</color>
+    <color name="colorPrimaryDark">#7d5fb2</color>
+    <color name="colorPrimaryLight">#4DC29FFF</color>
+    <color name="colorAccent">#ea80fc</color>
+    <!--  e040fb  -->
+</resources>
