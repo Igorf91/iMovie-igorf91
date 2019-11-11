@@ -1,0 +1,7 @@
+<resources>
+
+  <style name="DayNightTheme" parent="Theme.MaterialComponents.DayNight">
+    <!-- Add custom colors here. -->
+  </style>
+
+</resources>
