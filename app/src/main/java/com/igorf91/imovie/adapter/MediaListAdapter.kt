@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.igorf91.imovie.R
 import com.igorf91.imovie.vo.MediaVo
 
-class ListItemAdapter : RecyclerView.Adapter<MediaListViewHolder>() {
+class MediaListAdapter : RecyclerView.Adapter<MediaListViewHolder>() {
 
     private var mediaList: ArrayList<MediaVo> = arrayListOf()
 
