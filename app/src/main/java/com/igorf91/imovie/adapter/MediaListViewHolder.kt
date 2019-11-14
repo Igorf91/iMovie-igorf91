@@ -24,7 +24,7 @@ class MediaListViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
             .into(imagePoster)
 
         itemHeader.text = item.title
-        itemDescription.text = item.plot
+        itemDescription.text = item.overview
 
         itemView.setOnClickListener {
             //TODO navigate do details
