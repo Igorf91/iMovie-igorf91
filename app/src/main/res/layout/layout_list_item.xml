@@ -1,55 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimaryLight"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
 
-    <ImageView
-        android:id="@+id/img_poster"
-        android:layout_width="86dp"
-        android:layout_height="128dp"
-        android:layout_margin="8dp"
-        android:importantForAccessibility="no"
-        android:src="@drawable/img_placeholder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/item_header"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@id/item_description"
-        app:layout_constraintEnd_toStartOf="@id/item_header_date"
-        app:layout_constraintStart_toEndOf="@+id/img_poster"
-        app:layout_constraintTop_toTopOf="@+id/img_poster"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Lord of the rings" />
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="86dp"
+            android:layout_height="128dp"
+            android:layout_margin="8dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/img_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/item_header_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/item_header"
-        tools:text="(2001)" />
+        <TextView
+            android:id="@+id/item_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/item_description"
+            app:layout_constraintEnd_toStartOf="@id/item_header_date"
+            app:layout_constraintStart_toEndOf="@+id/img_poster"
+            app:layout_constraintTop_toTopOf="@+id/img_poster"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Lord of the rings" />
 
-    <TextView
-        android:id="@+id/item_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:maxLines="5"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_poster"
-        app:layout_constraintStart_toStartOf="@id/item_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_header"
-        tools:text="@tools:sample/lorem/random" />
+        <TextView
+            android:id="@+id/item_header_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_header"
+            tools:text="(2001)" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:maxLines="5"
+            app:layout_constraintBottom_toBottomOf="@+id/img_poster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/item_header"
+            app:layout_constraintTop_toBottomOf="@id/item_header"
+            tools:text="@tools:sample/lorem/random" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
