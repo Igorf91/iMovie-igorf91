@@ -5,4 +5,6 @@ by:igorf91
 
 -Navigation
 
+-Detekt
+
 -CircleCI
