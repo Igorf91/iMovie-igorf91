@@ -2,7 +2,7 @@
 <resources>
   <!-- deepPurple500 -->
   <color name="colorPrimary">#673ab7</color>
-  <color name="colorPrimaryDark">#482880</color>
-  <color name="colorPrimaryLight">#4D8561C5</color>
+  <color name="colorPrimaryDark">#320b86</color>
+  <color name="colorPrimaryLight">#E1E2E1</color>
   <color name="colorAccent">#aa00ff</color>
 </resources>

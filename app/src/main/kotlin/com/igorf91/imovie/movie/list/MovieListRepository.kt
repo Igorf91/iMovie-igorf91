@@ -17,7 +17,7 @@ class MovieListRepository {
     val movieList: LiveData<List<MediaVo>> = _movieList
 
     companion object {
-        private const val TAG = "MovieListRepository"
+        private const val LOCAL_TAG = "MovieListRepository"
         private const val TYPE = "movie"
     }
 
@@ -27,7 +27,7 @@ class MovieListRepository {
                 response.body()?.let { _movieList.postValue(it.results) }
             }
             throwable?.let {
-                Log.e(TAG, it.message?:"EMPTY RESPONSE")
+                Log.e(LOCAL_TAG, it.message?:"EMPTY RESPONSE")
             }
         })
     }

@@ -8,5 +8,19 @@
     <fragment
         android:id="@+id/movieLisFragment"
         android:name="com.igorf91.imovie.movie.list.MovieListFragment"
-        tools:layout="@layout/fragment_movie_list"/>
+        tools:layout="@layout/fragment_movie_list">
+        <action
+            android:id="@+id/action_movie_to_detail"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.igorf91.imovie.movie.detail.MovieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="mediaVo"
+            app:argType="com.igorf91.imovie.vo.MediaVo"/>
+    </fragment>
+
 </navigation>
