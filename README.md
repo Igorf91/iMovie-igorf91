@@ -1,5 +1,6 @@
 # iMovie
 by:igorf91
 
-MVVM
-CircleCI
+-Model-view-viewmodel 
+
+-CircleCI
