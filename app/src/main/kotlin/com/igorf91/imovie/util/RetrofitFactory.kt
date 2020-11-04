@@ -14,7 +14,7 @@ class RetrofitFactory {
         var request = chain.request()
         val url = request.url()
             .newBuilder()
-            .addQueryParameter("api_key", "temp")
+            .addQueryParameter("api_key", "change_this_key")
             .addQueryParameter("language", "pt-BR")
             .build()
 
