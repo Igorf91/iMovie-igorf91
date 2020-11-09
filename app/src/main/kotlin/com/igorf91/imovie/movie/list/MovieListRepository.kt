@@ -14,16 +14,28 @@ class MovieListRepository(private val api: TheMovieDbApi) {
 
     companion object {
         private const val LOCAL_TAG = "MovieListRepository"
+        private const val EMPTY_RESPONSE = "empty error response"
         private const val TYPE = "movie"
     }
 
     fun fetchPopularMovieList() {
         api.getPopularMediaByType(TYPE).enqueue(callback { response, throwable ->
-            response?.let {
-                response.body()?.let { _movieList.postValue(it.results) }
+            response?.body()?.let {
+                _movieList.postValue(it.results)
             }
             throwable?.let {
-                Log.e(LOCAL_TAG, it.message?:"EMPTY RESPONSE")
+                Log.e(LOCAL_TAG, it.message ?: EMPTY_RESPONSE)
+            }
+        })
+    }
+
+    fun filterList(value: String) {
+        api.searchMovieByName(query = value).enqueue(callback { response, throwable ->
+            response?.body()?.let {
+                _movieList.postValue(it.results)
+            }
+            throwable?.let {
+                Log.e(LOCAL_TAG, it.message ?: EMPTY_RESPONSE)
             }
         })
     }

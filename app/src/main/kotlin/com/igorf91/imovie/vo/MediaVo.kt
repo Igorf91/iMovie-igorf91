@@ -9,7 +9,7 @@ class MediaVo (
     @SerializedName("id")
     val id: Long,
     @SerializedName("poster_path")
-    val poster: String,
+    val poster: String?,
     @SerializedName("title")
     val title: String,
     @SerializedName("overview")

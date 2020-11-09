@@ -19,7 +19,7 @@ class MediaListViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val itemDescription = itemView.item_description
 
     fun bindView(item: MediaVo){
-        imagePoster.loadImage(item.poster, itemView)
+        imagePoster.loadImage(item.poster?:"", itemView)
 
         itemHeader.text = item.title
         itemHeaderDate.text = item.year.formatDate()
